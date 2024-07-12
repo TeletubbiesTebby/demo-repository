@@ -5,7 +5,7 @@ import Sidebar from '@/app/component/Slidebar'
 const Profile = () => {
     return (
       <div className="flex flex-col md:flex-row">
-        <Sidebar />
+        <Sidebar/>
         <div className="flex-1 p-6">
           <h1 className="text-2xl font-bold mb-4">My Profile</h1>
           <div className="bg-white p-4 rounded-lg shadow-md">

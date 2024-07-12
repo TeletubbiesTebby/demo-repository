@@ -1,16 +1,31 @@
 import Link from 'next/link';
+import Image from 'next/image'
+import profilePic from '/public/logo.svg'
+import profileMan from '/public/logoMan.svg'
 
 const Sidebar = () => {
   return (
     <div className="bg-purple-200 p-4 w-64 min-h-screen">
       <div className="flex items-center mb-6">
-        <img src="/path/to/logo.png" alt="Logo" className="h-10 w-10" />
-        <h1 className="ml-2 text-xl font-bold">BLOCKTECTIVE</h1>
+        <Image
+            src={profilePic}
+            alt="Picture of the author"
+            width={60} 
+            height={60} 
+        />
+        <h1 className="m-2 text-lg font-bold">BLOCKTECTIVE</h1>
       </div>
-      <div className="flex items-center mb-6">
-        <img src="/path/to/profile.png" alt="Profile" className="h-16 w-16 rounded-full" />
+      <div className="flex flex-col items-center mb-6">
+        <h1 className="m-2 pb-2 text-xl font-semibold font-mono">My Account</h1>
+          <Image
+            className='pb-3'
+            src={profileMan}
+            alt="Picture of the author"
+            width={60} 
+            height={60} 
+        />
         <div className="ml-4">
-          <p className="font-bold">Someone Helpme</p>
+          <p className="font-bold">Someone   Helpme</p>
           <p className="text-sm">Science-Mathematics</p>
         </div>
       </div>
