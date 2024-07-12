@@ -1,5 +1,4 @@
-"use client"; // เพิ่มบรรทัดนี้ที่ด้านบนสุด
-
+"use client"
 import React, { useState, useEffect } from 'react';
 import web3 from '../app/lib/web3';
 import MyContract from '../app/lib/MyContract';
@@ -60,6 +59,8 @@ const Home: React.FC = () => {
       />
       <button onClick={updateMessage}>Update Message</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+
+      
     </div>
   );
 };
