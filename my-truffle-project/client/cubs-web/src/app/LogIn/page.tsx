@@ -2,7 +2,7 @@
 import Sidebar from '@/app/component/Slidebar'
 import Image from 'next/image'
 import profilePic from '/public/logo.svg'
-
+import Navbar from '../component/์Navbar'
 const Profile = () => {
     return (
       <div className="flex flex-col md:flex-row">

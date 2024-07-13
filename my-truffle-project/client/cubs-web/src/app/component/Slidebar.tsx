@@ -5,7 +5,7 @@ import profileMan from '/public/logoMan.svg'
 
 const Sidebar = () => {
   return (
-    <div className="bg-purple-200 p-4 w-64 min-h-screen">
+    <div className="bg-purple-200 p-4 w-64 min-h-screen fixed top-0 left-0 z-50">
       <div className="flex items-center mb-6">
         <Image
             src={profilePic}
