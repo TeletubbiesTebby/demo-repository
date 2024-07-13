@@ -13,8 +13,8 @@ const MainLayout: React.FC = () => {
     };
 
     return (
-        <div className="grid grid-cols-5 gap-4">
-        <div className="col-span-3 grid grid-rows-3 gap-1">
+        <div className="grid grid-cols-6">
+        <div className="col-span-4 grid grid-rows-3 ">
             <CreateSection onPreviewChange={handlePreviewChange} />
             <PortfolioTemplateSection onPreviewChange={handlePreviewChange} />
             <SlideTemplateSection onPreviewChange={handlePreviewChange} />

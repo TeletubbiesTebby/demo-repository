@@ -15,7 +15,7 @@ const CreateSection: React.FC<SectionProps> = ({ onPreviewChange }) => {
 
     return (
         <main className='grid self-center'>
-            <p className='text-[24px] font-bold pb-2'>
+            <p className='text-[24px] font-bold'>
                 Create
             </p>
         <div className="grid grid-cols-4 gap-4 self-center">

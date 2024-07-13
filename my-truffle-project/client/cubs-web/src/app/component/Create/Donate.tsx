@@ -50,7 +50,7 @@ const Donate: React.FC = () => {
     return (
         <div className='grid place-items-center gap-5'>
             <div className="flex border-2 border-[#938E89] rounded-xl p-1 w-11/12  shadow-md">
-                <p className="grid self-center text-center px-2 text-[20px] font-medium">$</p>
+                <p className="grid self-center text-center px-2 text-[20px] font-medium text-[#6A6262]">$</p>
                 <input
                     className="w-full p-2 "
                     type="text"
@@ -64,9 +64,6 @@ const Donate: React.FC = () => {
             >
                 Donate for use
             </button>
-            {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
-
-
         </div>
     );
 };

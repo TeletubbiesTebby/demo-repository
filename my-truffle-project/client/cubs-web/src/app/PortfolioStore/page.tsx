@@ -8,7 +8,7 @@ const Portfolio = () => {
       <main>
         <Navbar/>
         <Sidebar />
-        <section className='ml-72'>
+        <section className='ml-80'>
             <Create/>
         </section>
       </main>

@@ -38,7 +38,7 @@ const Sidebar = () => {
           <p className="text-center block py-2 px-4 rounded hover:underline">My Portfolio</p>
         </Link>
         <Link href="/favorites">
-          <p className="text-center block py-2 px-4 rounded hover:underline">Favorites</p>
+          <p className="text-center block py-2 px-4 rounded hover:underline">Education</p>
         </Link>
         <Link href="/notifications">
           <p className="text-center block py-2 px-4 rounded hover:underline">Notifications</p>
