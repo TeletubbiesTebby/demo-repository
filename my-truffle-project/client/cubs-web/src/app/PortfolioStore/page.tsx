@@ -1,5 +1,5 @@
 "use client"
-import Navbar from '../component/์Navbar'
+import Navbar from '../component/Navbar'
 import Image from 'next/image'
 import Sidebar from '@/app/component/Slidebar';
 import Create from '@/app/component/Create';

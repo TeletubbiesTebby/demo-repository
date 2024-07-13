@@ -20,7 +20,7 @@ const PortfolioTemplateSection: React.FC<SectionProps> = ({ onPreviewChange }) =
             <div className="grid grid-cols-4 gap-4">
                 {templates.map(template => (
                     <div key={template.title} className=" p-2 cursor-pointer flex flex-col items-center justify-center space-y-2 hover:bg-gray-100 font-semibold" onClick={() => onPreviewChange(template.imageUrl, template.title)}>
-                        <Image src={template.imageUrl} alt={template.title} width={180} height={150} />
+                        <Image src={template.imageUrl} alt={template.title} width={180} height={150} className=''/>
                         <p>{template.title}</p>
                     </div>
                 ))}

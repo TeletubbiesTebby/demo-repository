@@ -6,7 +6,7 @@ import Link from 'next/link';
 import profileMan from '/public/logoMan.svg';
 import EditPic from '/public/Edit.svg';
 import SavePic from '/public/Save.svg';
-import Navbar from '../component/์Navbar';
+import Navbar from '../component/Navbar';
 
 const Profile = () => {
   const [editMode, setEditMode] = useState({

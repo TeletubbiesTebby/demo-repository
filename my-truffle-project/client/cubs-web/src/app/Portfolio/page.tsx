@@ -1,5 +1,5 @@
 "use client"
-import Navbar from '@/app/component/Slidebar'
+import Navbar from '@/app/component/Navbar'
 import Sidebar from '@/app/component/Slidebar'
 import Image from 'next/image'
 import prince1 from '/public/prince1.svg'
@@ -7,12 +7,15 @@ import prince2 from '/public/prince2.svg'
 import prince3 from '/public/prince3.svg'
 import prince4 from '/public/prince4.svg'
 import prince0 from '/public/image 48.svg'
+import Link from 'next/link'
 
 const Portfolio = () => {
     return (
+        <main>
+            <Navbar/>
         <div className="flex h-screen">
             <Sidebar />
-            <main className="flex p-20 pl-40">
+            <main className="flex pt-10 pl-40 pr-[3%]">
                 <div className="flex ml-40">
                     <div className="w-2/3 pr-8">
                         <h1 className="text-3xl font-bold mb-2">Activity Diary</h1>
@@ -63,36 +66,42 @@ const Portfolio = () => {
                     </div>
 
                     
-                    <div className="w-1/3 pl-8">
+                    <div className="w-1/3 pl-8 mb-10">
                         <h2 className="text-center text-2xl font-bold mb-4">My Diary</h2>
                         <div className="mb-4">
                             <input type="text" placeholder="Find your project" className="w-full p-2 border rounded-lg" />
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="p-4 border rounded-lg bg-stone-200">
-                                <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover rounded-lg mb-2" />
+                        <div className="grid grid-cols-2  bg-[#E7E7E7] rounded-2xl justify-items-center h-fit">
+                            <div className="p-4 ">
+                                <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover " />
                                 <p className='font-medium text-center'>elementary school life</p>
                             </div>
-                            <div className="p-4 border rounded-lg bg-stone-200">
-                            <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover rounded-lg mb-2" />
+                            <div className="p-4 ">
+                            <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover " />
                                 <p className='font-medium text-center'>With friend</p>
                             </div>
-                            <div className="p-4 border rounded-lg bg-stone-200">
-                            <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover rounded-lg mb-2" />
+                            <div className="p-4 ">
+                            <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover " />
                                 <p className='font-medium text-center'>With friend</p>
                             </div>
-                            <div className="p-4 border rounded-lg bg-stone-200">
-                            <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover rounded-lg mb-2" />
+                            <div className="p-4 ">
+                            <Image src={prince0} alt="Diary" width={100} height={100} className="w-40 h-34 object-cover " />
                                 <p className='font-medium text-center'>With friend</p>
                             </div>
-                            <div className="flex justify-center items-center w-full h-32 border rounded-lg bg-stone-300">
-                                <button className="text-3xl font-bold">+</button>
+                            <div className="grid justify-center items-center w-20 h-20 border rounded-full bg-stone-300 hover:bg-stone-400 mb-10">
+                                <Link
+                                    href='/PortfolioStore'
+                                >
+                                <button className="text-xl font-bold text-center">add+</button>
+                                </Link>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+        </main>
     );
 };
 
