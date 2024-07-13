@@ -40,7 +40,7 @@ const Sidebar = () => {
         <Link href="/Portfolio">
           <p className={`text-center block py-2 px-4 rounded 'hover:bg-purple-300'`}>My Portfolio</p>
         </Link>
-        <Link href="/Education">
+        {/* <Link href="/Education">
           <p className={`text-center block py-2 px-4 rounded 'hover:bg-purple-300'`}>Education</p>
         </Link>
         <Link href="/notifications">
@@ -48,7 +48,7 @@ const Sidebar = () => {
         </Link>
         <Link href="/settings">
           <p className={`text-center block py-2 px-4 rounded  'hover:bg-purple-300'`}>Settings</p>
-        </Link>
+        </Link> */}
       </nav>
     </div>
   );
