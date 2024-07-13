@@ -5,16 +5,17 @@ import profileMan from '/public/logoMan.svg'
 
 const Sidebar = () => {
   return (
-    <div className="bg-purple-200 p-4 w-64 min-h-screen fixed top-0 left-0 z-50">
-      <div className="flex items-center mb-6">
+    <div className="bg-purple-200 p-5 w-64 min-h-screen fixed top-0 left-0 z-50">
+      <div className="flex items-center mb-6 border-b-4 border-sky-800">
         <Image
             src={profilePic}
             alt="Picture of the author"
             width={60} 
             height={60} 
         />
-        <h1 className="m-2 text-lg font-bold">BLOCKTECTIVE</h1>
+        <h1 className="m-2 text-lg font-bold ">BLOCKTECTIVE</h1>
       </div>
+      
       <div className="flex flex-col items-center mb-6">
         <h1 className="m-2 pb-2 text-2xl font-semibold font-mono">My Account</h1>
           <Image
@@ -34,16 +35,16 @@ const Sidebar = () => {
           <p className="text-center block py-2 px-4 rounded bg-purple-300 text-white font-semibold">My Profile</p>
         </Link>
         <Link href="/portfolio">
-          <p className="text-center block py-2 px-4 rounded hover:bg-purple-300">My Portfolio</p>
+          <p className="text-center block py-2 px-4 rounded hover:underline">My Portfolio</p>
         </Link>
         <Link href="/favorites">
-          <p className="text-center block py-2 px-4 rounded hover:bg-purple-300">Favorites</p>
+          <p className="text-center block py-2 px-4 rounded hover:underline">Favorites</p>
         </Link>
         <Link href="/notifications">
-          <p className="text-center block py-2 px-4 rounded hover:bg-purple-300">Notifications</p>
+          <p className="text-center block py-2 px-4 rounded hover:underline">Notifications</p>
         </Link>
         <Link href="/settings">
-          <p className="text-center block py-2 px-4 rounded hover:bg-purple-300">Settings</p>
+          <p className="text-center block py-2 px-4 rounded hover:underline">Settings</p>
         </Link>
       </nav>
     </div>

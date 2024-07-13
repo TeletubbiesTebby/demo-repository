@@ -19,6 +19,9 @@ const Profile = () => {
   const [profile, setProfile] = useState({
     userName: 'Someone Helpme',
     description: 'Science-Mathematics',
+    school: 'xxxxxx',
+    fatherAccount: 'xxxxxx',
+    motherAccount: 'xxxxxx',
     firstName: 'Someone',
     lastName: 'Helpme',
     dateOfBirth: '29/02/2004',
@@ -68,12 +71,21 @@ const Profile = () => {
       <Navbar />
       <div className="flex flex-col md:flex-row ml-72">
         <Sidebar />
-        <div className="flex-1 p-6">
-          <h1 className="text-2xl font-sans font-bold mb-4 ml-4 mt-10">My Profile</h1>
+        <div className="flex-1 p-3">
+          <h1 className="text-3xl font-sans font-bold mb-4 ml-4 mt-10">My Profile</h1>
+          
           {/* Profile */}
           <div className="border-4 w-full rounded-3xl grid relative">
+            <Image
+              className='m-5'
+              src={profileMan}
+              alt="Picture of the author"
+              width={100}  
+            />
             {editMode.userName ? (
-              <div className='p-5'>
+              <div className='pl-7 flex'>
+                
+                <div>
                 <div className='mb-2'>
                   <label className='font-bold'>User Name: </label>
                   <input
@@ -94,7 +106,42 @@ const Profile = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className='absolute right-[5%] top-[35%]'>
+                <div className='mb-3'>
+                  <label className='font-bold'>School: </label>
+                  <input
+                    className='font-medium text-gray-500  w-fit'
+                    type="text"
+                    name="description"
+                    value={profile.school}
+                    onChange={handleChange}
+                  />
+                </div>
+                </div>
+
+                <div>
+                  <div className='mb-3 pl-20'>
+                  <label className='font-bold'>Father Account: </label>
+                  <input
+                    className='font-medium text-gray-500  w-fit'
+                    type="text"
+                    name="description"
+                    value={profile.fatherAccount}
+                    onChange={handleChange}
+                  />
+                  </div>
+                  <div className='mb-3 pl-20'>
+                  <label className='font-bold'>Mother Account: </label>
+                  <input
+                    className='font-medium text-gray-500  w-fit'
+                    type="text"
+                    name="description"
+                    value={profile.motherAccount}
+                    onChange={handleChange}
+                  />
+                  </div>
+                </div>
+
+                <div className='absolute right-[3%] top-[10%]'>
                   <Link href="#" passHref>
                     <button
                      className="text-white h-[35px] cursor-pointer bg-[#bd88e8] py-2 px-4 rounded-xl flex justify-center items-center"
@@ -107,17 +154,41 @@ const Profile = () => {
               </div>
             ) : (
               <div className='flex'>
-                <div className='p-5 ml-2 mt-2'>
+                <div className='pl-5 ml-2 flex'>
+
+                  <div>
                   <div className='mb-2'>
                     <h1 className='font-bold'>User Name:
                       <span className='font-medium text-gray-500'> {profile.userName}</span>
                     </h1>
                   </div>
+                  <div className='mb-2'>
                   <h1 className='font-bold'>Describe:
                     <span className='font-medium text-gray-500'> {profile.description}</span>
                   </h1>
+                  </div>
+                  <div className='mb-3'>
+                    <h1 className='font-bold'>School:
+                      <span className='font-medium text-gray-500'> {profile.school}</span>
+                    </h1>
+                  </div>
+                  </div>
+                  
+                  <div>
+                  <div className='mb-3 pl-32'>
+                    <h1 className='font-bold'>Father Account:
+                      <span className='font-medium text-gray-500'> {profile.fatherAccount}</span>
+                    </h1>
+                  </div>
+                  <div className='mb-3 pl-32'>
+                    <h1 className='font-bold'>Mother Account:
+                      <span className='font-medium text-gray-500'> {profile.motherAccount}</span>
+                    </h1>
+                  </div>
+                  </div>
+
                 </div>
-                <div className='absolute right-[5%] top-[35%]'>
+                <div className='absolute right-[2%] top-[10%]'>
                   <Image
                     className="h-[35px] cursor-pointer"
                     src={EditPic}
@@ -135,7 +206,7 @@ const Profile = () => {
             <div className="flex pl-6">
               {editMode.personalDetails ? (
                 <>
-                  <div className='pl-6'>
+                  <div className='pl-1'>
                     <div className='mb-2'>
                       <label className='font-bold'>First Name: </label>
                       <input
@@ -177,7 +248,7 @@ const Profile = () => {
                       />
                     </div>
                   </div>
-                  <div className='pl-24'>
+                  <div className='pl-20'>
                     <div className='mb-2'>
                       <label className='font-bold'>Last Name: </label>
                       <input
@@ -219,7 +290,7 @@ const Profile = () => {
                       />
                     </div>
                   </div>
-                  <div className='pl-32'>
+                  <div className='pl-18'>
                     <div className='mb-2'>
                       <label className='font-bold'>Nickname: </label>
                       <input
@@ -261,7 +332,7 @@ const Profile = () => {
                       />
                     </div>
                   </div>
-                  <div className='absolute right-[5%] top-[45%]'>
+                  <div className='absolute right-[3%] top-[10%]'>
                     <Link href="#" passHref>
                       <button
                         className="text-white h-[35px] cursor-pointer bg-[#bd88e8] py-2 px-4 rounded-xl flex justify-center items-center"
@@ -275,7 +346,7 @@ const Profile = () => {
                 </>
               ) : (
                 <>
-                  <div className='pl-6'>
+                  <div className='pl-1'>
                     <div className='mb-2'>
                       <h1 className='font-bold'>First Name:
                         <span className='font-medium text-gray-500'> {profile.firstName}</span>
@@ -297,7 +368,7 @@ const Profile = () => {
                       </h1>
                     </div>
                   </div>
-                  <div className='pl-24'>
+                  <div className='pl-28'>
                     <div className='mb-2'>
                       <h1 className='font-bold'>Last Name:
                         <span className='font-medium text-gray-500'> {profile.lastName}</span>
@@ -319,7 +390,7 @@ const Profile = () => {
                       </h1>
                     </div>
                   </div>
-                  <div className='pl-32'>
+                  <div className='pl-36'>
                     <div className='mb-2'>
                       <h1 className='font-bold'>Nickname:
                         <span className='font-medium text-gray-500'> {profile.nickname}</span>
@@ -341,7 +412,7 @@ const Profile = () => {
                       </h1>
                     </div>
                   </div>
-                  <div className='absolute right-[5%] top-[45%]'>
+                  <div className='absolute right-[2%] top-[10%]'>
                     <Image
                       className="h-[35px] cursor-pointer"
                       src={EditPic}
@@ -370,7 +441,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='mb-2 pl-28'>
+                  <div className='mb-2 pl-26'>
                     <label className='font-bold'>City: </label>
                     <input
                       className='font-medium text-gray-500  w-[150px]'
@@ -380,7 +451,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='mb-2 pl-28'>
+                  <div className='mb-2 pl-26'>
                     <label className='font-bold'>Province: </label>
                     <input
                       className='font-medium text-gray-500  w-[150px]'
@@ -390,7 +461,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='mb-5 pl-28'>
+                  <div className='mb-5 pl-26'>
                     <label className='font-bold'>Zip Code: </label>
                     <input
                       className='font-medium text-gray-500  w-[150px]'
@@ -400,7 +471,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='absolute right-[5%] top-[30%]'>
+                  <div className='absolute right-[3%] top-[30%]'>
                     <Link href="#" passHref>
                       <button
                        className="text-white h-[35px] cursor-pointer bg-[#bd88e8] py-2 px-4 rounded-xl flex justify-center items-center"
@@ -433,7 +504,7 @@ const Profile = () => {
                       <span className='font-medium text-gray-500'> {profile.zipCode}</span>
                     </h1>
                   </div>
-                  <div className='absolute right-[5%] top-[30%]'>
+                  <div className='absolute right-[2%] top-[30%]'>
                     <Image
                       className="h-[35px] cursor-pointer"
                       src={EditPic}
@@ -462,7 +533,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='mb-2 pl-28'>
+                  <div className='mb-2'>
                     <label className='font-bold'>Phone number: </label>
                     <input
                       className='font-medium text-gray-500'
@@ -472,7 +543,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='mb-5 pl-28'>
+                  <div className='mb-5'>
                     <label className='font-bold'>Facebook: </label>
                     <input
                       className='font-medium text-gray-500'
@@ -482,7 +553,7 @@ const Profile = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='absolute right-[5%] top-[30%]'>
+                  <div className='absolute right-[3%] top-[30%]'>
                     <Link href="#" passHref>
                       <button
                         className="text-white h-[35px] cursor-pointer bg-[#bd88e8] py-2 px-4 rounded-xl flex justify-center items-center"
@@ -501,17 +572,17 @@ const Profile = () => {
                       <span className='font-medium text-gray-500'> {profile.email}</span>
                     </h1>
                   </div>
-                  <div className='mb-2 pl-28'>
+                  <div className='mb-2 pl-14'>
                     <h1 className='font-bold'>Phone number:
                       <span className='font-medium text-gray-500'> {profile.phoneNumber}</span>
                     </h1>
                   </div>
-                  <div className='mb-5 pl-28'>
+                  <div className='mb-5 pl-20'>
                     <h1 className='font-bold'>Facebook:
                       <span className='font-medium text-gray-500'> {profile.facebook}</span>
                     </h1>
                   </div>
-                  <div className='absolute right-[5%] top-[30%]'>
+                  <div className='absolute right-[2%] top-[30%]'>
                     <Image
                       className="h-[35px] cursor-pointer"
                       src={EditPic}
